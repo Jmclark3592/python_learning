@@ -1,5 +1,7 @@
 import random
 
+
+
 def getAnswer(answerNumber):
     if answerNumber == 1:
         return "it is certain"
