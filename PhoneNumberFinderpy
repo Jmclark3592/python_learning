@@ -1,0 +1,9 @@
+#phone number search tool page 151 Automate the boring stuff
+
+import re
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') #now the phone number variable contains Regex object
+
+variable_name = phoneNumRegex.search('My number is 555-555-5555.')
+
+print("phone number found: " + variable_name.group())
