@@ -1,17 +1,11 @@
-messages = ['i love you', 'you\'re doing great', 'i\'m really proud of you']
-sent_messages = []
+cars = ['bmw', 'audi', 'toyota']
 
-def show_messages(messages):
-    for message in messages:
-        print(message)
+print(cars[0].title()) #prints Honda
 
-def send_messages(unsent, sent):
-    while unsent:
-        sent_message = unsent.pop()
-        print(f"sent message {sent_message}")
-        sent.append(sent_message)
-
-send_messages(messages[:], sent_messages)
-
-print(f"messages in first list {messages}")
-print(f"messages in second list {sent_messages}")
+cars.append('subaru') #adds to back of list ['honda', 'yamaha', 'suzuki', ducati]
+cars.insert(0, 'subaru') #adds to the front of the list
+del cars[0] #removes index 1 from the list and the program (irretreivable)
+popped_car = cars.pop(0) #moves index 1 to popped_motorcycle as a variable to be used again
+popped_car = cars.pop() #moves the last item on the list to popped_motorcycle as a variable
+cars.sort() #puts list in alphabetical order (permanently)
+cars.reverse() #reverses current order of a list
