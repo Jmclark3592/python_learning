@@ -47,7 +47,7 @@ class Coinbase(object):
 
         if options is not None:
             for key, value in operation.items():
-            for key, value in options.items():
+            for key, value in options.items(): #this has an expected indented block
                 params[key] = value
 
         return self.create_button_with_options(params)

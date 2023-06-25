@@ -56,6 +56,16 @@ def main():
     json_response = connect_to_endpoint(url, tweet_fields)
     print(json.dumps(json_response, indent=4, sort_keys=True)) #function dumps turns json into printable info
 
+def tracker_list(twitter_handle): #MADE THIS MYSELF. User inputs a list of twitter profiles to track.
+    profiles = [twitter_handle] #unsure if this will allow multiple handles to be added.
+    return profiles
+
+follow_tracker = #need to figure out how to track who follows
+
+def tracker_type(type_of_tracker): #MADE THIS MYSELF
+    if type_of_tracker == follow_tracker:
+        #to finish
+
 
 if __name__ == "__main__":
     main()
