@@ -1,0 +1,31 @@
+#Expense Tracker: Create a program where you can input your expenses and income and get a balance. 
+#For a little extra challenge, add categories and the ability to filter by category.
+
+expenses = {}
+incomes = {}
+total_expense = 0
+total_income = 0
+
+
+while True:
+    type1 = input("\nAre you entering a monthly expense or income? (Type 'done' to stop) ")
+    if type1.lower() == 'expense':
+        expense = input("please enter type of expense: ")
+        cost = input("please enter amount of expense: ")
+        cost = int(cost)
+        total_expense += cost
+        expenses[expense] = cost
+    if type1.lower() == 'income':
+        income = input("please enter source of income: ")
+        cost2 = input("please enter amount of income: ")
+        cost2 = int(cost2)
+        total_income += cost2
+        incomes[income] = cost2
+    if type1.lower() == 'done':
+        break
+    else:
+        continue
+
+disc_income = total_income - total_expense
+
+print(f"Your total income is {total_income} with total expenses {total_expense} for discretionary income {disc_income}")
