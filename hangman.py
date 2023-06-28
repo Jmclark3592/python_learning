@@ -8,15 +8,30 @@ updated_word = []
 
 hangman_word = random.choice(possibilities)
 hangman_letters = list(hangman_word)
-length = len(hangman_letters)
-length_in_asterisk = '* ' * length
-updated_word = length_in_asterisk
-guessed_word = list(updated_word) #word stored as asterisks
+
+guessed_word = ['*'] * len(hangman_word)
 count = 0
 
-
-
-
 def check(guess):
+    global count
     if guess in hangman_letters:
-        for letter in range(len(hangman_letters)):
+        for i, letter in enumerate(hangman_letters):
+            if letter == guess:
+                guessed_word[i] = guess
+    else:
+        count += 1
+    if count >= 6:
+        print("sorry too many guesses")
+        quit()
+
+while True:
+    print(' '.join(guessed_word))
+    guess = input("Guess a letter: ")
+    check(guess)
+    if '*' not in guessed_word:
+        print(f"Congrats! You've guessed the word!")
+        print(' '.join(guessed_word))
+        break
+    
+
+
