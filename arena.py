@@ -2,6 +2,17 @@ import random, copy
 
 print('''\tWelcome to the arena''')
 
+class NPC:
+    def __init__(self, type, str1, agi, hp):
+        self.type = type
+        self.str1 = str1
+        self.agi = agi
+        self.hp = hp
+        self.alive = 1
+
+    #def attack(self):
+
+
 npc1 = {'str1' : 8, 'agi' : 6, 'hp' : 28, 'alive' : 1}
 npc2 = {'str1' : 4, 'agi' : 9, 'hp' : 32, 'alive' : 1}
 
