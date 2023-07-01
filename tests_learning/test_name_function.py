@@ -11,5 +11,5 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(formatted_name, "Janis Joplin")
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     unittest.main()
