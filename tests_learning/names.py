@@ -1,5 +1,6 @@
 import name_function
 
+quit
 print("enter 'q' at any time to quit")
 while True:
     first = input("\nPlease give me a first name: ")
