@@ -1,4 +1,4 @@
-import name_function
+from name_function import get_formatted_name
 
 quit
 print("enter 'q' at any time to quit")
